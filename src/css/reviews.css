@@ -1,4 +1,5 @@
 .reviews {
+    margin: 0 auto;
     padding-bottom: 72px;
 }
 
@@ -29,7 +30,7 @@
     /* text-align: center; */
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #111111;
+    color: var(--black-color);
 }
 
 .reviews-wrap {
