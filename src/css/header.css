@@ -113,7 +113,7 @@
     }
 
     .menu-button-header {
-        background-color: #FFFFFF;
+        background-color: var(--white);
         border: 0px;
         display: block;
     }
@@ -136,17 +136,18 @@
     }
 
     .burger-menu-header {
-        background: #1E1823;
+        background: var(--purple);
         width: 100vw;
         height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
         padding: 20px;
+        display: block;
     }
 
     .button-buerger-menu {
-        background-color: #1E1823;
+        background-color: var(--purple);
         border-radius: 50%;
         border: 0px;
         color: #FFFFFF;
@@ -205,7 +206,7 @@
     }
 
     .menu-button-header {
-        background-color: #FFFFFF;
+        background-color: var(--white);
         border: 0px;
         display: block;
     }
