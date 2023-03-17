@@ -12,7 +12,7 @@
     line-height: 1.1;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #111;
+    color: var(--black-color);
 
     display: flex;
     margin-right: 188px;
@@ -35,7 +35,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1;
-    color: #111;
+    color: var(--black-color);
     margin-right: 120px;
 }
 
@@ -45,7 +45,7 @@
 
 .list-nav-item:hover,
 .list-nav-item:focus {
-    color: #FD9222;
+    color: var(--orange);
 }
 
 .list-nav-item:last-child {
@@ -73,10 +73,14 @@
 
 .list-social-links-link:hover,
 .list-social-links-link:focus {
-    fill: #FD9222;
+    fill: var(--orange);
 }
 
 .menu-button-header {
+    display: none;
+}
+
+.burger-menu-header {
     display: none;
 }
 
