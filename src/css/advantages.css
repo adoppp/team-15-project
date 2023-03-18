@@ -4,7 +4,7 @@
   --card-set-gap: 50px;
 }
 
-body {
+/* body {
   background-color: var(--page-bg-color);
   color: var(--primary-text-color);
   line-height: 1.5;
@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
+} */
 
 
 /* PAGE */
