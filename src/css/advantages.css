@@ -133,7 +133,10 @@ border-color: var(--orange);
 
 @media screen and (min-width: 480px) {
   .advantages-container {
-    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .advantages-card-set {
     width: 100%;}
@@ -142,8 +145,10 @@ border-color: var(--orange);
 @media screen and (min-width: 768px) {
   .advantages-container {
     max-width: 768px;
-    display: flex;
-    flex-wrap: wrap;
+    padding-right: 32px;
+    padding-left: 32px;
+    /* display: flex;
+    flex-wrap: wrap; */
   }
   .advantages-card-set {
     width: 100%;
