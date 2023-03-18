@@ -1,5 +1,6 @@
 :root {
   --purple: #1e1823;
+  --orange: #FD9222;
   --white: #ffffff;
   --card-set-gap: 50px;
 }
@@ -74,7 +75,7 @@
 
 .advantages-card-content {
   padding: 22px 18px 9px 0px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 /* .advantages-card-set:not(:first-child)  {
@@ -99,8 +100,10 @@
 
 .advantages-icon {
   display: flex;
-width: 62px; 
-height: 62px;
+width: 32px; 
+height: 32px;
+border-radius: 1px solid 20%;
+border-color: var(--orange);
 }
 
 .advantages-item {
