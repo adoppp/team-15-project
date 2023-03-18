@@ -1,21 +1,26 @@
+.footer-fill {
+    background-color: var(--purple);
+}
+
 .icon-svg {
-    stroke: #ffffff;
+    stroke: var(--white);
 }
 
 .icon-svg:hover {
 
-    stroke: #FD9222;
+    stroke: var(--orange);
 }
 
-.footer-section {
-    background-color: #1E1823;
+body {
+    margin: 0px;
+    padding: 0px;
+
 }
 
 .footer {
 
     padding: 32px 20px;
 }
-
 
 .footer-slogan {
     max-width: 300px;
@@ -25,7 +30,7 @@
     font-size: 24px;
     line-height: 1.17;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: var(--white);
     margin-bottom: 32px;
 }
 
@@ -36,11 +41,11 @@
 
 .footer-accent {
 
-    color: #FD9222;
+    color: var(--orange);
 }
 
 .address-tel {
-    color: #ffffff;
+    color: var(--white);
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -54,7 +59,7 @@
     margin-bottom: 4px;
 }
 
-.dd {
+.address-soc-list-wrap {
     display: flex;
     justify-content: space-between;
 }
@@ -65,15 +70,12 @@
 
 }
 
-
 /* soc-list */
 .soc-list {
     display: flex;
     gap: 24px;
 
 }
-
-/*  */
 
 /* Footer anchor menu */
 .footer-anchor-link {
@@ -83,7 +85,7 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: -0.02em;
-    color: #FFFFFF;
+    color: var(--white);
 
 }
 
@@ -101,7 +103,6 @@
 @media screen and (min-width: 375px) {
 
     .footer-section {
-        background-color: #1E1823;
         margin-left: auto;
         margin-right: auto;
         width: 375px;
@@ -109,8 +110,8 @@
 }
 
 @media screen and (min-width: 768px) {
+
     .footer-section {
-        /* background-color: #1E1823; */
         margin-left: auto;
         margin-right: auto;
         width: 768px;
@@ -144,6 +145,7 @@
         font-size: 28px;
         line-height: 1.21;
         margin-right: 124px;
+
     }
 
     .footer-address {
@@ -158,6 +160,7 @@
 }
 
 @media screen and (min-width: 1200px) {
+
     .footer-section {
         width: 1200px;
     }
