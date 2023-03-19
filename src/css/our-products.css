@@ -1,0 +1,104 @@
+.section-products {
+  background: #e2e2e2;
+}
+
+.heading-products {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--black-color);
+  margin-bottom: 32px;
+}
+.title-products {
+  margin-left: 5px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--orange);
+}
+.image-slider__image {
+  padding: 32px 52px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+}
+.img-products {
+  margin-bottom: 8px;
+}
+.caption-products {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--black-color);
+  margin-bottom: 2px;
+}
+.subtitle-products {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: rgba(17, 17, 17, 0.7);
+  margin-bottom: 18px;
+}
+.button-products {
+  border-radius: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--black-color);
+  background: #fafafa;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+}
+@media screen and (min-width: 375px) {
+  .container-products {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 375px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-products {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 33px;
+    padding-right: 33px;
+    width: 768px;
+  }
+  .heading-products {
+    font-size: 24px;
+    line-height: 1.1;
+    color: var(--black-color);
+    margin-bottom: 50px;
+  }
+  .title-products {
+    font-size: 24px;
+    line-height: 1.1;
+    color: var(--orange);
+  }
+  .image-slider__image {
+    padding: 32px 20px;
+  }
+  .image-slider__slide {
+    margin-right: 18px;
+  }
+}
