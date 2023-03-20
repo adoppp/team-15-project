@@ -125,6 +125,14 @@ body {
     display: none;
 }
 
+.link-hdr {
+    display: none;
+}
+
+.da {
+    display: none;
+}
+
 @media screen and (min-width: 1200px) {
 
     .header-button {
@@ -155,8 +163,16 @@ body {
         margin-right: 24px;
     }
 
+    .da {
+        display: block;
+    }
+
     .item-header:last-child {
         margin-right: 0;
+    }
+
+    .item-header:is(:hover, :focus) {
+        color: var(--orange);
     }
 
     .list-nav {
