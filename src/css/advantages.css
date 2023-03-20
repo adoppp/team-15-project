@@ -26,7 +26,7 @@
 
 /* CONTAINER */
 .advantages-container {
-  width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -45,12 +45,11 @@
   width: 1100px;
   list-style: none;
   display: flex;
- 
+
   /* margin-left: calc(-1 * var(--card-set-gap)); */
   margin-top: calc(-1 * var(--card-set-gap));
   margin-right: var(--card-set-gap);
 }
-
 .advantages-card-set > .item {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-left: var(--card-set-gap);
@@ -99,10 +98,11 @@
 
 .advantages-icon {
   display: flex;
-width: 32px; 
-height: 32px;
-border-radius: 1px solid 20%;
-border-color: var(--orange);
+  width: 62px;
+  height: 62px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 17px;
 }
 
 .advantages-item {
@@ -152,7 +152,11 @@ border-color: var(--orange);
   }
   .advantages-card-set {
     width: 100%;
-   
+  }
+  .advantages-card-set > .advantages-item {
+    flex-basis: calc(100% / 2 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
   }
 }
 
