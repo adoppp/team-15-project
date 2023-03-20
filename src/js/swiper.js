@@ -19,3 +19,18 @@ const swiper2 = new Swiper('.reviews-swiper', {
         }
     }
 });
+new Swiper('.image-slider', {
+    pagination: {
+        el: '.swiper-pagination-products',
+        clickable:true,
+    },
+    slidesPerView: 1,
+      breakpoints: {
+        768: {
+            slidesPerView: 3,         
+        },
+        1200: {
+            slidesPerView: 4,          
+        }
+    }
+});
