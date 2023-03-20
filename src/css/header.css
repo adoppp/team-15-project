@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .header-container {
     padding: 20px 20px 16px 20px;
     display: flex;
@@ -30,4 +34,153 @@
 .container-link {
     display: flex;
     align-items: center;
+}
+
+.container-menu {
+    background-color: var(--purple);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    transform: translateX(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-menu.is-open {
+    transform: translateX(0);
+  }
+
+.btn-close-modal {
+    background-color: var(--purple);
+    border: 0px;
+    color: var(--white);
+    margin-left: auto;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-size: 18px;
+}
+
+.btn-close-modal:is(:hover,) {
+    background-color: #FCF1E0;
+    color: #D44528;
+}
+
+.svg-modal {
+    max-width: 28px;
+    max-height: 28px;
+}
+
+.item-list-nav {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.item-list-nav:last-child {
+    margin-bottom: 0;
+}
+
+.item-list-nav:is(:hover, :focus) {
+    color: var(--orange);
+}
+
+.list-nav-modal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link-modal {
+    display: flex;
+}
+
+.svg-link {
+    max-width: 22px;
+    max-height: 22px;
+    fill: var(--white);
+}
+
+.svg-link:is(:hover, :focus) {
+    fill: var(--orange);
+}
+
+.item-mod-link {
+    margin-right: 28px;
+}
+
+.item-mod-link:last-child {
+    margin-right: 0;
+}
+
+.list-nav {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .header-button {
+        display: none;
+    }
+
+    .container-menu {
+        display: none;
+    }
+
+    .header-container {
+        padding: 24px 32px 32px 32px;
+        align-items: center;
+    }
+
+    .link-header {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .item-header {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.1;
+        color: var(--black-color);
+        margin-right: 24px;
+    }
+
+    .item-header:last-child {
+        margin-right: 0;
+    }
+
+    .list-nav {
+        display: flex;
+    }
+
+    .link-hdr {
+        display: flex;
+    }
+
+    .item-link {
+        margin-right: 28px;
+    }
+    
+    .item-link:last-child {
+        margin-right: 0;
+    }
+
+    .svg-link-hdr {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    
+    .svg-link-hdr:is(:hover, :focus) {
+        fill: var(--orange);
+    }
 }
