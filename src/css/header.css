@@ -6,6 +6,15 @@ body {
     padding: 20px 20px 16px 20px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-burger{
+    width: 28px;
+    height: 28px;
+    stroke: var(--black-color);
 }
 
 .link-header {
@@ -22,12 +31,12 @@ body {
 }
 
 .svg-header {
-    max-width: 21px;
-    max-height: 21px;
+    width: 21px;
+    height: 21px;
 }
 
 .header-button {
-    background-color: var(--white);
+    background-color: var(--body-color);
     border: 0px;
 }
 
@@ -37,8 +46,9 @@ body {
 }
 
 .container-menu {
+    width: 220px;
     background-color: var(--purple);
-    padding: 20px;
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -52,29 +62,57 @@ body {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.close-btn-container{
+position: relative;
+padding-top: 136px;
+
+
+}
+.mobile-menu-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .container-menu.is-open {
     transform: translateX(0);
   }
 
 .btn-close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     background-color: var(--purple);
     border: 0px;
     color: var(--white);
     margin-left: auto;
     border-radius: 50%;
-    padding: 2px 8px;
     font-size: 18px;
+    padding: 0;
+    margin-bottom: 88px;
+    transition-property: stroke, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-close-modal:is(:hover,) {
+.btn-close-modal:is(:hover, :focus) .svg-modal{
     background-color: #FCF1E0;
-    color: #D44528;
+    stroke: #D44528;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.mobile-menu-list{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 
 .svg-modal {
-    max-width: 28px;
-    max-height: 28px;
+    width: 28px;
+    height: 28px;
+    padding: 6px 6px;
+    stroke: var(--white);
 }
 
 .item-list-nav {
@@ -84,6 +122,9 @@ body {
     line-height: 1.1;
     color: var(--white);
     margin-bottom: 24px;
+    transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-list-nav:last-child {
@@ -104,13 +145,18 @@ body {
 }
 
 .svg-link {
-    max-width: 22px;
-    max-height: 22px;
-    fill: var(--white);
+    width: 22px;
+    height: 22px;
+    stroke: var(--white);
+    fill: var(--purple);
+    transition-property: stroke;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-link:is(:hover, :focus) {
-    fill: var(--orange);
+    stroke: var(--orange);
+    cursor: pointer;
 }
 
 .item-mod-link {
@@ -133,6 +179,55 @@ body {
     display: none;
 }
 
+@media screen and (min-width: 375px){
+    .header-container{
+        max-width: 375px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .header-container{
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .menu-burger{
+        width: 32px;
+        height: 32px;
+    }
+    .container-menu {
+        padding-left: 85px;
+        width: 290px;
+    }
+
+    .close-btn-container{
+
+        padding-top: 156px;
+
+    }
+    .mobile-menu-list{
+    
+    bottom: 24px;
+    left: 32px;
+}
+.btn-close-modal {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+}
+.svg-modal{
+    width: 32px;
+    height: 32px;
+}
+.svg-link {
+    width: 24px;
+    height: 24px;
+}
+
+}
+
 @media screen and (min-width: 1200px) {
 
     .header-button {
@@ -142,8 +237,12 @@ body {
     .container-menu {
         display: none;
     }
-
+    .svg-header{
+        width: 24px;
+        height: 24px;
+    }
     .header-container {
+        max-width: 1200px;
         padding: 24px 32px 32px 32px;
         align-items: center;
     }
@@ -194,9 +293,12 @@ body {
     .svg-link-hdr {
         max-width: 24px;
         max-height: 24px;
+        stroke: var(--black-color);
+        fill: var(--white);
     }
     
     .svg-link-hdr:is(:hover, :focus) {
-        fill: var(--orange);
+        stroke: var(--orange);
+        cursor: pointer;
     }
 }

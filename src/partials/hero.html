@@ -1,25 +1,35 @@
 <section class="hero-container">
   <div class="hero">
-    <h2 class="visually-hidden">Features</h2>
+    <h1 class="visually-hidden">Features</h1>
     <p class="hero-title">
       Treat yourself or a loved one to our finest ingredients for a moment of
       pure delight!
     </p>
     <ul class="hero-flex-btn">
-      <li><button class="hero-btn-modal" type="button">Buy now</button></li>
       <li>
-        <button class="hero-btn-how" type="button" id="#">
-          How it&#39;s made
+        <button
+          class="hero-btn-modal js-open-modal"
+          type="button"
+          data-modal="new-buy"
+        >
+          Buy now
+        </button>
+      </li>
+      <li>
+        <button class="hero-btn-how" type="button">
+          <a href="#how-its-Made">How it&#39;s made</a>
         </button>
       </li>
       <li class="item-margin">
-        <button class="hero-btn-footer" type="button" id="#">
-          <span class="hero-text">scroll down</span>
-          <span class="hero-icon-div">
-            <svg class="hero-svg" height="16px" width="16px">
-              <use href="../img/symbol-defs.svg#icon-scroll"></use>
-            </svg>
-          </span>
+        <button class="hero-btn-footer" type="button">
+          <a class="hero-text" href="#footer">
+            scroll down
+            <span class="hero-icon-div">
+              <svg class="hero-svg" height="16px" width="16px">
+                <use href="./img/symbol-defs.svg#icon-icon-scroll-2"></use>
+              </svg>
+            </span>
+          </a>
         </button>
       </li>
     </ul>

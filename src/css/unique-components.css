@@ -2,7 +2,7 @@
 /* Section Unique Components */
 .components-section {
   font-family: 'Montserrat';
-  background-color: var(--white-2);
+  background-color: var(--body-color);
 }
 .components-container {
   width: 100%;
@@ -12,7 +12,6 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 81px;
-  overflow: scroll;
 }
 
 .components-title {
@@ -64,18 +63,15 @@
   background-color: var(--purple);
 }
 .components-item:nth-child(odd) .components-item-text {
-  color: var(--white-2);
+  color: var(--body-color);
 }
 .components-item:first-child .components-card-front {
   background-color: var(--orange);
 }
 
-.components-link {
-  position: relative;
-  display: block;
+.components-card {
   width: 100%;
   height: auto;
-  text-decoration: none;
   background-color: transparent;
 }
 .components-img {
@@ -101,7 +97,7 @@
   transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transform-style: preserve-3d;
 }
-.components-link:is(:hover, :focus) .components-card-inner {
+.components-card:is(:hover, :focus) .components-card-inner {
   transform: rotateY(180deg);
 }
 .components-card-front,
@@ -158,7 +154,7 @@
   background-color: var(--orange);
 }
 .card-back-item:last-child {
-  background-color: var(--white-2);
+  background-color: var(--body-color);
   border: 1px solid var(--orange);
 }
 .card-back-block {
@@ -172,7 +168,7 @@
 .card-back-item:last-child .card-back-block {
   color: var(--black-color);
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 375px) {
   .components-container {
     max-width: 375px;
   }

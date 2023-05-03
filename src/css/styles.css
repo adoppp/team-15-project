@@ -15,11 +15,42 @@
 @import url('./reviews.css');
 @import url('./subscribe.css');
 @import url('./footer.css');
+@import url('./modal.css');
 
 
 :root {
-  --black-color: #111111; 
+  --black-color: #111111;
   --purple: #1E1823;
   --orange: #FD9222;
   --white: #ffffff;
+  --body-color: #FAFAFA;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.swiper-pagination {
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  gap: 13px;
+  opacity: 1;
+  background-color: rgba(17, 17, 17, 0.1);
+  transition-property: width, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper-pagination-bullet-active {
+  width: 28px;
+  height: 13px;
+  background-color: var(--orange);
+  border-radius: 6px;
 }

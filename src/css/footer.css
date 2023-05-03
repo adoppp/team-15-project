@@ -4,6 +4,7 @@
 
 .icon-svg {
     stroke: var(--white);
+    fill: var(--purple);
 }
 
 .icon-svg:hover {

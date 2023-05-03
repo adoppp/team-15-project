@@ -1,26 +1,58 @@
-    <section class="sellers-section">
-      <div class="sellers-container">
-        <h2 class="sellers-title"><span>Top</span>Sellers</h2>
-        <div class="sellers-img">
-          <ul class="sellers-img-list">
-            <li class="sellers-img-item">
-              <img src="../img/ts-img1-368.png" alt="chocolate" />
-            </li>
-            <li class="sellers-img-item">
-              <img src="../img/ts-img2-368.png" alt="chocolate" />
-            </li>
-            <li class="sellers-img-item">
-              <img src="../img/ts-img3-368.png" alt="chocolate" />
-            </li>
-          </ul>
-        </div>
-        <div class="sellers-text-container">
-          <p class="sellers-text">
+<section class="sellers-section" id="top-sellers">
+  <div class="sellers-container">
+    <h2 class="sellers-title"><span>Top</span> Sellers</h2>
+    <div class="sellers-img">
+      <!-- Image -->
+      <ul class="sellers-img-list">
+        <li class="sellers-img-item">
+          <div class="ts-thumb ts-first-thumb">
+            <img
+              class="ts-first-img"
+              srcset="./img/ts-img1-368@1x.jpg 1x, ./img/ts-img1-368@2x.jpg 2x"
+              src="/img/ts-img1-368@1x.jpg"
+              alt="chocolate"
+            />
+          </div>
+
+          <p class="sellers-img-text">
             Crazy enough chocolate originates from a bean just like the coffee
             bean called Cacao. Cacao has been around for thousands of years and
             was first discovered by the Native American tribe called the Mayans.
           </p>
-        </div>
-        <button class="sellers-button">Buy now</button>
+        </li>
+
+        <li class="sellers-img-item">
+          <div class="ts-thumb">
+            <img
+              srcset="./img/ts-img2-368@1x.jpg 1x, ./img/ts-img2-368@2x.jpg 2x"
+              src="../img/ts-img2-368@1x.jpg"
+              alt="chocolate"
+            />
+          </div>
+        </li>
+
+        <li class="sellers-img-item">
+          <div class="ts-thumb">
+            <img
+              srcset="./img/ts-img3-368@1x.jpg 1x, ./img/ts-img3-368@2x.jpg 2x"
+              src="./img/ts-img3-368@1x.jpg"
+              alt="chocolate"
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="sellers-text-btn-container">
+      <div class="sellers-text-container">
+        <p class="sellers-text">
+          Crazy enough chocolate originates from a bean just like the coffee
+          bean called Cacao. Cacao has been around for thousands of years and
+          was first discovered by the Native American tribe called the Mayans.
+        </p>
       </div>
-    </section>
+      <button class="sellers-button js-open-modal" data-modal="new-buy">
+        Buy now
+      </button>
+    </div>
+  </div>
+</section>

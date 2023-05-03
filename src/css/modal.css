@@ -1,0 +1,1013 @@
+/* .backdrop-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+} */
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  text-align: center;
+  /* padding: 30px; */
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ======================================================= */
+/* ======================NEW BUY=========================== */
+/* ======================================================= */
+
+.modal-container-buy {
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 311px;
+  max-height: 100vh;
+  background-color: #fafafa;
+  padding: 32px 24px;
+  border-radius: 15px;
+}
+
+.modal-close-btn-buy {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+  padding: 0;
+  border-radius: 50%;
+}
+.swiper-slide-buy {
+  justify-content: space-between;
+}
+.modal-icon-buy {
+  width: 24px;
+  height: 24px;
+  stroke: #000000;
+}
+
+.modal-title-buy {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--black-color);
+  padding-bottom: 32px;
+}
+
+.modal-title-accent-buy {
+  color: #fd9222;
+}
+
+.modal-swiper-item {
+  width: 100%;
+  max-width: 231px;
+  margin: 0 auto;
+}
+
+.modal-swiper-window {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 28px;
+  margin-bottom: 20px;
+  background-color: var(--white);
+}
+
+.modal-swiper-window-info {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  color: var(--black-color);
+  height: 33px;
+  background: #fafafa;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 27px;
+}
+
+.modal-swiper-img {
+  padding-top: 32px;
+}
+
+.modal-form-buy {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  padding: 32px 0 18px 0;
+}
+
+.modal-form-title-buy {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #000000;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.modal-card-logo {
+  display: flex;
+  position: relative;
+}
+.modal-card-icon {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 14px;
+}
+
+.modal-form-personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-form-input-buy {
+  padding: 14px 18px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+  border-radius: 8px;
+  width: 100%;
+  height: 45px;
+  background-color: #fafafa;
+}
+
+.modal-form-input-buy::placeholder {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-form-input-number .modal-form-input-buy {
+  padding-left: 92px;
+}
+
+.modal-form-input-number {
+  display: block;
+  height: 45px;
+  position: relative;
+}
+
+.modal-flex-buy {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  width: 74px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.modal-flag-buy {
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  background-image: linear-gradient(#0057b7 50%, #ffd700 50%);
+}
+
+.modal-phone-code-buy {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.modal-form-textarea .modal-form-input-buy {
+  min-height: 91px;
+  resize: none;
+}
+
+.modal-button-buy {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  text-align: center;
+  display: flex;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: inherit;
+  background-color: var(--orange);
+  color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-buy:hover,
+.modal-button-buy:focus {
+  background-color: #fcf1e0;
+  color: var(--orange);
+}
+.modal-swiper-list {
+  overflow-x: hidden;
+}
+/* ===================================================== */
+/* ================TABLET/DESKTOP STYLE=================== */
+/* =======================NEW BUY========================= */
+@media screen and (min-width: 768px) {
+  .modal-container-buy {
+    overflow-y: scroll;
+    max-width: 609px;
+    max-height: 100vh;
+    padding: 48px;
+  }
+
+  .modal-close-btn-buy {
+    top: 24px;
+    right: 24px;
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+  }
+
+  .modal-title-buy {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .modal-swiper-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .swiper-slide-buy {
+    margin-bottom: 0;
+  }
+
+  .modal-swiper-item {
+    width: 160px;
+    height: 196px;
+  }
+
+  .modal-swiper-window {
+    padding-bottom: 18px;
+    height: 196px;
+    justify-content: end;
+  }
+
+  .modal-swiper-window-info {
+    margin-top: 14px;
+  }
+
+  .modal-swiper-img {
+    padding-top: 24px;
+  }
+
+  .modal-form-buy {
+    padding-top: 40px;
+  }
+
+  .modal-form-title-buy {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .modal-card-icon {
+    width: 44px;
+    height: 30px;
+    top: 18px;
+    right: 24px;
+  }
+
+  .modal-form-personal-info {
+    /* width: 513px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 21px;
+  }
+
+  .modal-form-input-buy {
+    padding: 22px 24px;
+    border-radius: 13px;
+    /* min-width: 246px; */
+    height: 66px;
+  }
+
+  .modal-form-input-buy::placeholder {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+  }
+
+  .modal-form-input-number .modal-form-input-buy {
+    padding-left: 149px;
+  }
+
+  .modal-form-input-number {
+    height: 66px;
+  }
+
+  .modal-flex-buy {
+    top: 17px;
+    left: 24px;
+    height: 32px;
+    width: 125px;
+    gap: 18px;
+  }
+
+  .modal-flag-buy {
+    width: 32px;
+    height: 24px;
+  }
+
+  .modal-phone-code-buy {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+  }
+
+  .modal-form-textarea .modal-form-input-buy {
+    min-height: 137px;
+  }
+
+  .modal-button-buy {
+    padding: 14px 40px;
+    display: flex;
+  }
+}
+
+/* ======================================================= */
+/* ======================REVIEW=========================== */
+/* ======================================================= */
+
+.modal-container-review {
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 311px;
+  max-height: 100vh;
+  background-color: #fafafa;
+  padding: 32px 24px;
+  border-radius: 15px;
+}
+
+.modal-close-btn-review {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+  padding: 0;
+}
+
+.modal-close-icon-review {
+  stroke: var(--black-color);
+}
+
+.modal-title-review {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+.modal-title-position-review {
+  display: block;
+  text-align: left;
+}
+
+.modal-title-accent-review {
+  color: var(--orange);
+}
+
+.modal-form-review {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  padding: 32px 0 18px 0;
+}
+
+.modal-input-review {
+  padding: 14px 18px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+  border-radius: 8px;
+  width: 100%;
+  height: 45px;
+  background-color: #fafafa;
+}
+
+.modal-input-review::placeholder {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-input-number-review .modal-input-review {
+  padding-left: 92px;
+}
+
+.modal-input-number-review {
+  display: block;
+  height: 45px;
+  position: relative;
+}
+
+.modal-flex-review {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  width: 74px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.modal-flag-review {
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  background-image: linear-gradient(#0057b7 50%, #ffd700 50%);
+}
+
+.modal-phone-code-review {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.modal-form-textarea .modal-input-review {
+  min-height: 91px;
+  resize: none;
+}
+
+.modal-button-review {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  text-align: center;
+  display: flex;
+  padding: 12px 28px;
+  border-radius: 100px;
+  border: inherit;
+  background-color: var(--orange);
+  color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-review:hover,
+.modal-button-review:focus {
+  background-color: #fcf1e0;
+  color: var(--orange);
+}
+
+/* ===================================================== */
+/* ================TABLET/DESKTOP STYLE=================== */
+/* =======================REVIEW========================= */
+@media screen and (min-width: 768px) {
+  .modal-container-review {
+    overflow: hidden;
+    max-width: 517px;
+    padding: 40px;
+  }
+
+  .modal-close-btn-review {
+    top: 24px;
+    right: 24px;
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+  }
+
+  .modal-title-review {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .modal-title-position-review {
+    display: inline;
+  }
+
+  .modal-title-accent-review {
+    display: block;
+  }
+
+  .modal-form-review {
+    row-gap: 19px;
+    padding-top: 40px;
+  }
+
+  .modal-input-review {
+    padding: 22px 24px;
+    border-radius: 13px;
+    height: 66px;
+  }
+
+  .modal-input-review::placeholder {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+  }
+
+  .modal-input-number-review .modal-input-review {
+    padding-left: 149px;
+  }
+
+  .modal-input-number-review {
+    height: 66px;
+  }
+
+  .modal-flex-review {
+    top: 17px;
+    left: 24px;
+    height: 32px;
+    width: 125px;
+    gap: 18px;
+  }
+
+  .modal-flag-review {
+    width: 32px;
+    height: 24px;
+  }
+
+  .modal-phone-code-review {
+    font-size: 18px;
+    line-height: calc(22 / 18);
+  }
+
+  .modal-form-textarea .modal-input-review {
+    min-height: 137px;
+  }
+
+  .modal-button-review {
+    padding: 14px 40px;
+  }
+}
+
+/* ======================================================= */
+/* ==================THX FOR FEEDBACK===================== */
+/* ======================================================= */
+.modal-close-btn-feedback {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+  padding: 6px;
+  background-color: #fcf1e0;
+  border-radius: 50%;
+}
+
+.modal-close-icon-feedback {
+  stroke: #f16529;
+}
+
+.modal-container-feedback {
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 311px;
+  max-height: 100vh;
+  background-color: var(--orange);
+  padding: 84px 24px 178px 58px;
+  border-radius: 15px;
+}
+
+.modal-title-feedback {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fcf1e0;
+  text-align: left;
+}
+
+.modal-title-feedback-position {
+  display: block;
+}
+
+.modal-text-feedback {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-top: 8px;
+  text-align: left;
+}
+
+.modal-text-feedback-position {
+  display: block;
+}
+
+.modal-feedback-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* ====================================================== */
+/* ================TABLET/DESKTOP STYLE================== */
+/* ==================THX FOR FEEDBACK==================== */
+
+@media screen and (min-width: 768px) {
+  .modal-close-btn-feedback {
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .modal-close-icon-feedback {
+    width: 22px;
+    height: 22px;
+  }
+
+  .modal-container-feedback {
+    max-width: 516px;
+    padding: 163px 49px 163px 170px;
+  }
+
+  .modal-title-feedback {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .modal-text-feedback {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  .modal-text-feedback-position {
+    display: inline;
+  }
+}
+
+/* ======================================================= */
+/* =======================THX YOU========================= */
+/* ======================================================= */
+
+.modal-close-btn-thx {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+  padding: 6px;
+  background-color: #fcf1e0;
+  border-radius: 50%;
+}
+
+.modal-close-icon-thx {
+  stroke: #f16529;
+  width: 16px;
+  height: 16px;
+}
+
+.modal-container-thx {
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 311px;
+  max-height: 100vh;
+  background-color: var(--orange);
+  padding: 84px 24px 170px 68px;
+  border-radius: 15px;
+}
+
+.modal-title-thx {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fcf1e0;
+  text-align: left;
+}
+
+.modal-text-thx {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-top: 8px;
+}
+
+.modal-thx-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* ====================================================== */
+/* ================TABLET/DESKTOP STYLE================== */
+/* =======================THX YOU======================== */
+
+@media screen and (min-width: 768px) {
+  .modal-close-btn-thx {
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .modal-close-icon-thx {
+    width: 22px;
+    height: 22px;
+  }
+
+  .modal-container-thx {
+    max-width: 516px;
+    padding: 154px 44px 154px 163px;
+  }
+
+  .modal-title-thx {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .modal-text-thx {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+/* ======================================================= */
+/* ======================EXPLORE========================== */
+/* ======================================================= */
+
+.modal-container-explore {
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 311px;
+  max-height: 100vh;
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.modal-explore-background {
+  display: block;
+  background-image: url(/img/mobile-explore.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: auto;
+  margin-left: auto;
+  height: 169px;
+}
+
+.modal-close-btn-explore {
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background-color: transparent;
+  line-height: 0;
+  padding: 0;
+}
+
+.modal-close-icon-color-explore {
+  stroke: var(--white);
+  width: 24px;
+  height: 24px;
+}
+
+.modal-explore-form {
+  padding: 32px 24px;
+}
+
+.modal-title-explore {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--black-color);
+  text-align: left;
+}
+
+.modal-title-row-explore {
+  display: block;
+}
+
+.modal-title-accent-explore {
+  color: #fd9222;
+}
+
+.modal-explore-flex {
+  position: relative;
+  margin-top: 24px;
+}
+
+.modal-form-explore {
+  background-color: inherit;
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  filter: drop-shadow(0px 5.44492px 5.44492px rgba(0, 0, 0, 0.03));
+  border-radius: 25px;
+  height: 45px;
+  outline: 0;
+}
+
+.modal-form-explore::placeholder {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
+
+.modal-button-explore {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px 22px;
+  height: 45px;
+  width: 100px;
+  border-radius: 100px;
+  border: inherit;
+  background-color: var(--orange);
+  color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-explore:hover,
+.modal-button-explore:focus {
+  background-color: #fcf1e0;
+  color: var(--orange);
+}
+/* ======================================================= */
+/* ================TABLET/DESKTOP STYLE=================== */
+/* =======================EXPLORE========================= */
+
+@media screen and (min-width: 768px) {
+  .modal-container-explore {
+    max-width: 538px;
+  }
+
+  .modal-explore-background {
+    background-image: url(/img/tab-desc-explore.jpg);
+    height: 196px;
+  }
+
+  .modal-close-btn-explore {
+    top: 24px;
+    right: 24px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+  }
+
+  .modal-close-icon-color-explore {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-explore-form {
+    padding: 40px;
+  }
+
+  .modal-title-explore {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .modal-explore-flex {
+    margin-top: 28px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .modal-form-explore {
+    width: 313px;
+    padding: 15px 24px;
+    height: 52px;
+  }
+
+  .modal-form-explore::placeholder {
+    font-size: 18px;
+  }
+
+  .modal-button-explore {
+    padding: 16px 42px;
+    height: 52px;
+    width: 137px;
+    position: relative;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .modal-explore-background {
+    background-image: url('/img/tab-desc-explore@2x.jpg');
+  }
+}
