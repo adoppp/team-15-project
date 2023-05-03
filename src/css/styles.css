@@ -54,3 +54,7 @@ body {
   background-color: var(--orange);
   border-radius: 6px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
